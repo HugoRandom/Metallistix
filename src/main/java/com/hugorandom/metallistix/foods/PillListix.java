@@ -1,0 +1,43 @@
+package com.hugorandom.metallistix.foods;
+
+import com.hugorandom.metallistix.effects.EffectsInit;
+import com.hugorandom.metallistix.util.ItemGroupTabs;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+
+public class PillListix extends Item {
+
+    public PillListix() {
+        super(new Properties()
+                .rarity(Rarity.UNCOMMON)
+                .food(Unstable())
+                .tab(ItemGroupTabs.METALLISTIX_FOODS));
+    }
+
+    public static final FoodProperties Unstable(){
+        FoodProperties build = new FoodProperties.Builder()
+                .effect(() -> new MobEffectInstance(EffectsInit.UNSTABLE.get(), 1200, 0), 1.0f)
+                .nutrition(2)
+                .saturationMod(0.3f)
+                .alwaysEat()
+                .fast()
+                .build();
+        return build;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel,
+                                List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(new TranslatableComponent("tooltip.metallistix." + pStack.getItem().asItem()));
+    }
+}
