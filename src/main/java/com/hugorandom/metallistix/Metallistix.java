@@ -1,27 +1,18 @@
 package com.hugorandom.metallistix;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-import java.util.stream.Collectors;
-
-@Mod(Metallistix.mod_id)
+@Mod(Metallistix.MOD_ID)
 public class Metallistix
 {
     // Directly reference a slf4j logger
-    public static final String mod_id = "metallistix";
+    public static final String MOD_ID = "metallistix";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Metallistix()
