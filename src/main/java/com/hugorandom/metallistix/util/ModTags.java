@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredStructureFeature;
 
-public class MetallistixTags {
+public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> METALLISTIX_BLOCKS = tag("blocks");

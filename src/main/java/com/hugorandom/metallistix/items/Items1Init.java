@@ -9,7 +9,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class Items1Init {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Metallistix.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = 
+            DeferredRegister.create(ForgeRegistries.ITEMS, Metallistix.MOD_ID);
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
@@ -19,8 +20,8 @@ public class Items1Init {
             ITEMS.register("disprosio_ingot", CommonItem::new);
     public static final RegistryObject<Item> FRANITOLINA_INGOT =
             ITEMS.register("franitolina_ingot", CommonItem::new);
-    public static final RegistryObject<Item> MELUNA_INGOT =
-            ITEMS.register("meluna_ingot", CommonItem::new);
+    public static final RegistryObject<Item> MELITONILA_INGOT =
+            ITEMS.register("melitonila_ingot", CommonItem::new);
     public static final RegistryObject<Item> ALEZARITA_INGOT =
             ITEMS.register("alezarita_ingot", CommonItem::new);
     public static final RegistryObject<Item> HALIX_INGOT =
@@ -33,8 +34,8 @@ public class Items1Init {
             ITEMS.register("disprosio_nugget", CommonItem::new);
     public static final RegistryObject<Item> FRANITOLINA_NUGGET =
             ITEMS.register("franitolina_nugget", CommonItem::new);
-    public static final RegistryObject<Item> MELUNA_NUGGET =
-            ITEMS.register("meluna_nugget", CommonItem::new);
+    public static final RegistryObject<Item> MELITONILA_NUGGET =
+            ITEMS.register("melitonila_nugget", CommonItem::new);
     public static final RegistryObject<Item> ALEZARITA_NUGGET =
             ITEMS.register("alezarita_nugget", CommonItem::new);
     public static final RegistryObject<Item> HALIX_NUGGET =
@@ -47,8 +48,8 @@ public class Items1Init {
             ITEMS.register("raw_disprosio", CommonItem::new);
     public static final RegistryObject<Item> RAW_FRANITOLINA =
             ITEMS.register("raw_franitolina", CommonItem::new);
-    public static final RegistryObject<Item> RAW_MELUNA =
-            ITEMS.register("raw_meluna", CommonItem::new);
+    public static final RegistryObject<Item> RAW_MELITONILA =
+            ITEMS.register("raw_melitonila", CommonItem::new);
     public static final RegistryObject<Item> RAW_ALEZARITA =
             ITEMS.register("raw_alezarita", CommonItem::new);
     public static final RegistryObject<Item> RAW_HALIX =
@@ -61,8 +62,8 @@ public class Items1Init {
             ITEMS.register("disprosio_dust", CommonItem::new);
     public static final RegistryObject<Item> FRANITOLINA_DUST =
             ITEMS.register("franitolina_dust", CommonItem::new);
-    public static final RegistryObject<Item> MELUNA_DUST =
-            ITEMS.register("meluna_dust", CommonItem::new);
+    public static final RegistryObject<Item> MELITONILA_DUST =
+            ITEMS.register("melitonila_dust", CommonItem::new);
     public static final RegistryObject<Item> ALEZARITA_DUST =
             ITEMS.register("alezarita_dust", CommonItem::new);
     public static final RegistryObject<Item> HALIX_DUST =
@@ -75,8 +76,8 @@ public class Items1Init {
             ITEMS.register("disprosio_gem", GemItem::new);
     public static final RegistryObject<Item> FRANITOLINA_GEM =
             ITEMS.register("franitolina_gem", GemItem::new);
-    public static final RegistryObject<Item> MELUNA_GEM =
-            ITEMS.register("meluna_gem", GemItem::new);
+    public static final RegistryObject<Item> MELITONILA_GEM =
+            ITEMS.register("melitonila_gem", GemItem::new);
     public static final RegistryObject<Item> ALEZARITA_GEM =
             ITEMS.register("alezarita_gem", GemItem::new);
     public static final RegistryObject<Item> HALIX_GEM =

@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -31,21 +32,22 @@ public class Smoothie extends Item {
             .alwaysEat()
             .build();
 
-    public UseAnim getUseAnimation(ItemStack p_77661_1_) {
-        return UseAnim.DRINK.DRINK;
+    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack p_77661_1_) {
+        return UseAnim.DRINK;
     }
 
-    public SoundEvent getDrinkingSound() {
+    public @NotNull SoundEvent getDrinkingSound() {
         return SoundEvents.HONEY_DRINK;
     }
 
-    public SoundEvent getEatingSound() {
+    public @NotNull SoundEvent getEatingSound() {
         return SoundEvents.HONEY_DRINK;
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents,
-                                TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.metallistix." + pStack.getItem().asItem()));
+                                @NotNull TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(new TranslatableComponent(
+                "tooltip.metallistix." + pStack.getItem().asItem()));
     }
 }

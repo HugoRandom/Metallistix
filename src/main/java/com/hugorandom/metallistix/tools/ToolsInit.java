@@ -19,8 +19,8 @@ public class ToolsInit {
             () -> new Sword(ToolsTier.DISPROSIO));
     public static final RegistryObject<Item> FRANITOLINA_SWORD = TOOLS.register("franitolina_sword",
             () -> new Sword(ToolsTier.FRANITOLINA));
-    public static final RegistryObject<Item> MELUNA_SWORD = TOOLS.register("meluna_sword",
-            () -> new Sword(ToolsTier.MELUNA));
+    public static final RegistryObject<Item> MELITONILA_SWORD = TOOLS.register("melitonila_sword",
+            () -> new Sword(ToolsTier.MELITONILA));
     public static final RegistryObject<Item> ALEZARITA_SWORD = TOOLS.register("alezarita_sword",
             () -> new Sword(ToolsTier.ALEZARITA));
     public static final RegistryObject<Item> HALIX_SWORD = TOOLS.register("halix_sword",
@@ -33,8 +33,8 @@ public class ToolsInit {
             () -> new Pickaxe(ToolsTier.DISPROSIO));
     public static final RegistryObject<Item> FRANITOLINA_PICKAXE = TOOLS.register("franitolina_pickaxe",
             () -> new Pickaxe(ToolsTier.FRANITOLINA));
-    public static final RegistryObject<Item> MELUNA_PICKAXE = TOOLS.register("meluna_pickaxe",
-            () -> new Pickaxe(ToolsTier.MELUNA));
+    public static final RegistryObject<Item> MELITONILA_PICKAXE = TOOLS.register("melitonila_pickaxe",
+            () -> new Pickaxe(ToolsTier.MELITONILA));
     public static final RegistryObject<Item> ALEZARITA_PICKAXE = TOOLS.register("alezarita_pickaxe",
             () -> new Pickaxe(ToolsTier.ALEZARITA));
     public static final RegistryObject<Item> HALIX_PICKAXE = TOOLS.register("halix_pickaxe",
@@ -47,8 +47,8 @@ public class ToolsInit {
             () -> new Axe(ToolsTier.DISPROSIO));
     public static final RegistryObject<Item> FRANITOLINA_AXE = TOOLS.register("franitolina_axe",
             () -> new Axe(ToolsTier.FRANITOLINA));
-    public static final RegistryObject<Item> MELUNA_AXE = TOOLS.register("meluna_axe",
-            () -> new Axe(ToolsTier.MELUNA));
+    public static final RegistryObject<Item> MELITONILA_AXE = TOOLS.register("melitonila_axe",
+            () -> new Axe(ToolsTier.MELITONILA));
     public static final RegistryObject<Item> ALEZARITA_AXE = TOOLS.register("alezarita_axe",
             () -> new Axe(ToolsTier.ALEZARITA));
     public static final RegistryObject<Item> HALIX_AXE = TOOLS.register("halix_axe",
@@ -61,8 +61,8 @@ public class ToolsInit {
             () -> new Shovel(ToolsTier.DISPROSIO));
     public static final RegistryObject<Item> FRANITOLINA_SHOVEL = TOOLS.register("franitolina_shovel",
             () -> new Shovel(ToolsTier.FRANITOLINA));
-    public static final RegistryObject<Item> MELUNA_SHOVEL = TOOLS.register("meluna_shovel",
-            () -> new Shovel(ToolsTier.MELUNA));
+    public static final RegistryObject<Item> MELITONILA_SHOVEL = TOOLS.register("melitonila_shovel",
+            () -> new Shovel(ToolsTier.MELITONILA));
     public static final RegistryObject<Item> ALEZARITA_SHOVEL = TOOLS.register("alezarita_shovel",
             () -> new Shovel(ToolsTier.ALEZARITA));
     public static final RegistryObject<Item> HALIX_SHOVEL = TOOLS.register("halix_shovel",
@@ -75,8 +75,8 @@ public class ToolsInit {
             () -> new Hoe(ToolsTier.DISPROSIO));
     public static final RegistryObject<Item> FRANITOLINA_HOE = TOOLS.register("franitolina_hoe",
             () -> new Hoe(ToolsTier.FRANITOLINA));
-    public static final RegistryObject<Item> MELUNA_HOE = TOOLS.register("meluna_hoe",
-            () -> new Hoe(ToolsTier.MELUNA));
+    public static final RegistryObject<Item> MELITONILA_HOE = TOOLS.register("melitonila_hoe",
+            () -> new Hoe(ToolsTier.MELITONILA));
     public static final RegistryObject<Item> ALEZARITA_HOE = TOOLS.register("alezarita_hoe",
             () -> new Hoe(ToolsTier.ALEZARITA));
     public static final RegistryObject<Item> HALIX_HOE = TOOLS.register("halix_hoe",

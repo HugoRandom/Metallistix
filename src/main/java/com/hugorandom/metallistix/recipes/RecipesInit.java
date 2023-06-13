@@ -1,14 +1,13 @@
-package com.hugorandom.metallistix.util;
+package com.hugorandom.metallistix.recipes;
 
 import com.hugorandom.metallistix.Metallistix;
-import com.hugorandom.metallistix.screens.slots.recipes.UpgradingRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class Recipes {
+public class RecipesInit {
 
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Metallistix.MOD_ID);

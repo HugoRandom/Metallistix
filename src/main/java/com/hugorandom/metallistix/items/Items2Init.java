@@ -9,23 +9,30 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 public class Items2Init {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Metallistix.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = 
+            DeferredRegister.create(ForgeRegistries.ITEMS, Metallistix.MOD_ID);
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
 
     public static final RegistryObject<net.minecraft.world.item.Item> DISPROSIO_DISC =
-            ITEMS.register("disprosio_disc", () -> new DiscItem(1, SoundsInit.CABALLERITA_DISC));
+            ITEMS.register("disprosio_disc", () -> 
+                    new DiscItem(1, SoundsInit.DISPROSIO_DISC));
     public static final RegistryObject<net.minecraft.world.item.Item> FRANITOLINA_DISC =
-            ITEMS.register("franitolina_disc", () -> new DiscItem(1, SoundsInit.FRANITOLINA_DISC));
-    public static final RegistryObject<net.minecraft.world.item.Item> MELUNA_DISC =
-            ITEMS.register("meluna_disc", () -> new DiscItem(1, SoundsInit.MELUNA_DISC));
+            ITEMS.register("franitolina_disc", () -> 
+                    new DiscItem(1, SoundsInit.FRANITOLINA_DISC));
+    public static final RegistryObject<net.minecraft.world.item.Item> MELITONILA_DISC =
+            ITEMS.register("melitonila_disc", () -> 
+                    new DiscItem(1, SoundsInit.MELITONILA_DISC));
     public static final RegistryObject<net.minecraft.world.item.Item> ALEZARITA_DISC =
-            ITEMS.register("alezarita_disc", () -> new DiscItem(1, SoundsInit.ALEZARITA_DISC));
+            ITEMS.register("alezarita_disc", () -> 
+                    new DiscItem(1, SoundsInit.ALEZARITA_DISC));
     public static final RegistryObject<net.minecraft.world.item.Item> HALIX_DISC =
-            ITEMS.register("halix_disc", () -> new DiscItem(1, SoundsInit.HUGODIUM_DISC));
+            ITEMS.register("halix_disc", () -> 
+                    new DiscItem(1, SoundsInit.HALIX_DISC));
     public static final RegistryObject<net.minecraft.world.item.Item> MIGUELITIO_DISC =
-            ITEMS.register("miguelitio_disc", () -> new DiscItem(1, SoundsInit.MIGUELITIO_DISC));
+            ITEMS.register("miguelitio_disc", () -> 
+                    new DiscItem(1, SoundsInit.MIGUELITIO_DISC));
 
     public static final RegistryObject<Item> UMC = ITEMS.register("umc",
             UMCItem::new);

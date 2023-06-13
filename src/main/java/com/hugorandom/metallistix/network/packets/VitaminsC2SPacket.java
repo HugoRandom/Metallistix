@@ -20,8 +20,8 @@ import java.util.function.Supplier;
 
 public class VitaminsC2SPacket {
 
-    private static final String VITAMINS_CONSUMED_MESSAGE = "message.oredium.vitamins";
-    private static final String VITAMINS_NO_CONSUMED_MESSAGE = "message.oredium.no_vitamins";
+    private static final String VITAMINS_CONSUMED_MESSAGE = "message.metallistix.vitamins";
+    private static final String VITAMINS_NO_CONSUMED_MESSAGE = "message.metallistix.no_vitamins";
     public VitaminsC2SPacket(){
 
     }

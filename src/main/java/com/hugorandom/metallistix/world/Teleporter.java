@@ -13,7 +13,8 @@ public class Teleporter implements ITeleporter {
     }
 
     @Override
-    public Entity placeEntity(Entity entity, ServerLevel currentWorld, ServerLevel destWorld, float yaw, Function<Boolean, Entity> repositionEntity) {
+    public Entity placeEntity(Entity entity, ServerLevel currentWorld, ServerLevel destWorld,
+                              float yaw, Function<Boolean, Entity> repositionEntity) {
         return repositionEntity.apply(true);
     }
 

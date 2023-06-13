@@ -11,19 +11,18 @@ public class Pill extends Item {
 
     public Pill(MobEffect effect, int duration, int amplifier) {
         super(new Properties()
-                .rarity(Rarity.UNCOMMON)
+                .rarity(Rarity.COMMON)
                 .food(PILLS(effect, duration, amplifier))
                 .tab(ItemGroupTabs.METALLISTIX_FOODS));
     }
 
-    public static final FoodProperties PILLS(MobEffect pEffect, int duration, int amplifier){
-        FoodProperties build = new FoodProperties.Builder()
+    public static FoodProperties PILLS(MobEffect pEffect, int duration, int amplifier){
+        return new FoodProperties.Builder()
                 .effect(() -> new MobEffectInstance(pEffect, duration, amplifier), 1.0f)
                 .nutrition(1)
                 .saturationMod(0.1f)
                 .alwaysEat()
                 .fast()
                 .build();
-        return build;
     }
 }

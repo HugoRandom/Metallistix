@@ -24,10 +24,10 @@ public class SoundsInit {
     public static final RegistryObject<SoundEvent> UPGRADING_SOUND = registerSoundEvent("upgrading_sound");
 
     // Discos de Musica
-    public static final RegistryObject<SoundEvent> CABALLERITA_DISC = registerSoundEvent("caballerita_disc");
+    public static final RegistryObject<SoundEvent> DISPROSIO_DISC = registerSoundEvent("disprosio_disc");
     public static final RegistryObject<SoundEvent> FRANITOLINA_DISC = registerSoundEvent("franitolina_disc");
-    public static final RegistryObject<SoundEvent> MELUNA_DISC = registerSoundEvent("meluna_disc");
+    public static final RegistryObject<SoundEvent> MELITONILA_DISC = registerSoundEvent("melitonila_disc");
     public static final RegistryObject<SoundEvent> ALEZARITA_DISC = registerSoundEvent("alezarita_disc");
-    public static final RegistryObject<SoundEvent> HUGODIUM_DISC = registerSoundEvent("hugodium_disc");
+    public static final RegistryObject<SoundEvent> HALIX_DISC = registerSoundEvent("halix_disc");
     public static final RegistryObject<SoundEvent> MIGUELITIO_DISC = registerSoundEvent("miguelitio_disc");
 }

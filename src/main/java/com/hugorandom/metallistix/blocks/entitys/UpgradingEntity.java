@@ -2,7 +2,7 @@ package com.hugorandom.metallistix.blocks.entitys;
 
 import com.hugorandom.metallistix.blocks.BlocksEntitiesInit;
 import com.hugorandom.metallistix.sounds.SoundsInit;
-import com.hugorandom.metallistix.screens.slots.recipes.UpgradingRecipe;
+import com.hugorandom.metallistix.recipes.UpgradingRecipe;
 import com.hugorandom.metallistix.screens.UpgradingMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -73,7 +73,7 @@ public class UpgradingEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("screen.oredium.upgrading");
+        return new TranslatableComponent("screen.metallistix.upgrading");
     }
 
     @Nullable
@@ -164,11 +164,13 @@ public class UpgradingEntity extends BlockEntity implements MenuProvider {
 
         if(match.isPresent()) {
             ItemStack output = new ItemStack(match.get().getResultItem().getItem());
-            Map<Enchantment, Integer> enchants0 = EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(0));
+            Map<Enchantment, Integer> enchants0 =
+                    EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(0));
             for(Map.Entry<Enchantment, Integer> mapEntry : enchants0.entrySet()){
                 output.enchant(mapEntry.getKey(), mapEntry.getValue());
             }
-            Map<Enchantment, Integer> enchants1 = EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(1));
+            Map<Enchantment, Integer> enchants1 =
+                    EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(1));
             for(Map.Entry<Enchantment, Integer> mapEntry : enchants1.entrySet()){
                 output.enchant(mapEntry.getKey(), mapEntry.getValue());
             }

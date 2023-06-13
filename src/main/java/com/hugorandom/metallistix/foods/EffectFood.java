@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -22,20 +23,20 @@ public class EffectFood extends Item {
                 .tab(ItemGroupTabs.METALLISTIX_FOODS));
     }
 
-    public static final FoodProperties FOOD(MobEffect pEffect, int duration, int amplifier,
-                                            int nutricion, float saturation){
-        FoodProperties build = new FoodProperties.Builder()
+    public static FoodProperties FOOD(MobEffect pEffect, int duration, int amplifier,
+                                      int nutricion, float saturation){
+        return new FoodProperties.Builder()
                 .effect(() -> new MobEffectInstance(pEffect, duration, amplifier), 1.0f)
                 .nutrition(nutricion)
                 .saturationMod(saturation)
                 .alwaysEat()
                 .build();
-        return build;
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents,
-                                TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.metallistix." + pStack.getItem().asItem()));
+                                @NotNull TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(new TranslatableComponent(
+                "tooltip.metallistix." + pStack.getItem().asItem()));
     }
 }

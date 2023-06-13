@@ -1,10 +1,10 @@
 package com.hugorandom.metallistix.blocks;
 
 import com.hugorandom.metallistix.blocks.entitys.UpgradingEntity;
-import com.hugorandom.metallistix.world.DimensionsInit;
+import com.hugorandom.metallistix.world.dimensions.DimensionsInit;
 import com.hugorandom.metallistix.items.Items1Init;
 import com.hugorandom.metallistix.particles.ParticlesInit;
-import com.hugorandom.metallistix.util.MetallistixTags;
+import com.hugorandom.metallistix.util.ModTags;
 import com.hugorandom.metallistix.foods.FoodsInit;
 import com.hugorandom.metallistix.effects.EffectsInit;
 import net.minecraft.core.BlockPos;
@@ -34,6 +34,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
@@ -63,7 +64,8 @@ public class MetallistixBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos,
+                         BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()){
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (blockEntity instanceof UpgradingEntity){
@@ -84,7 +86,7 @@ public class MetallistixBlock extends BaseEntityBlock {
                         NetworkHooks.openGui(((ServerPlayer) pPlayer), (UpgradingEntity)entity, pPos);
                     }
                     else{
-                        throw new IllegalStateException("Pal lobby hermano");
+                        throw new IllegalStateException("Pal lobby hermano, CAGASTE.");
                     }
                 } else if (pPlayer.getItemInHand(pHand).is(FoodsInit.LISTIX_PILL.get())) {
                     pPlayer.getItemInHand(pHand).shrink(1);
@@ -127,30 +129,33 @@ public class MetallistixBlock extends BaseEntityBlock {
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random rand) {
+    public void animateTick(@NotNull BlockState pState, @NotNull Level pLevel,
+                            @NotNull BlockPos pPos, Random rand) {
         if (rand.nextInt(10) == 0) {
-            pLevel.addParticle(ParticlesInit.METALLISTIX_PARTICLE.get(), (double)pPos.getX() + rand.nextDouble(),
-                    (double)pPos.getY() + 1.1D, (double)pPos.getZ() + rand.nextDouble(),
+            pLevel.addParticle(ParticlesInit.METALLISTIX_PARTICLE.get(),
+                    (double)pPos.getX() + rand.nextDouble(),
+                    (double)pPos.getY() + 1.1D,
+                    (double)pPos.getZ() + rand.nextDouble(),
                     0.0D, 0.0D, 0.0D);
         }
         super.animateTick(pState, pLevel, pPos, rand);
     }
 
     @Override
-    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock,
-                                BlockPos pFromPos, boolean pIsMoving) {
+    public void neighborChanged(@NotNull BlockState pState, Level pLevel, BlockPos pPos,
+                                @NotNull Block pBlock, @NotNull BlockPos pFromPos, boolean pIsMoving) {
         if (isEnergyBlock(pLevel.getBlockState(pPos.above()))) {
             if (!pState.getValue(ENERGY)) {
-                pLevel.setBlock(pPos, pState.setValue(ENERGY, Boolean.valueOf(true)), 3);
+                pLevel.setBlock(pPos, pState.setValue(ENERGY, Boolean.TRUE), 3);
             }
         }
         else{
-            pLevel.setBlock(pPos, pState.setValue(ENERGY, Boolean.valueOf(false)), 3);
+            pLevel.setBlock(pPos, pState.setValue(ENERGY, Boolean.FALSE), 3);
         }
         super.neighborChanged(pState, pLevel, pPos, pBlock, pFromPos, pIsMoving);
     }
 
     private static boolean isEnergyBlock(BlockState state) {
-        return state.is(MetallistixTags.Blocks.METALLISTIX_BLOCKS);
+        return state.is(ModTags.Blocks.METALLISTIX_BLOCKS);
     }
 }

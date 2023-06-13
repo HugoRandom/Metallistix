@@ -1,6 +1,6 @@
 package com.hugorandom.metallistix.items;
 
-import com.hugorandom.metallistix.world.DimensionsInit;
+import com.hugorandom.metallistix.world.dimensions.DimensionsInit;
 import com.hugorandom.metallistix.particles.ParticlesInit;
 import com.hugorandom.metallistix.network.MetallistixPackets;
 import com.hugorandom.metallistix.network.packets.TeleporterChargeS2CPacket;
@@ -26,6 +26,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -46,21 +47,22 @@ public class TeleporterItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents,
-                                TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.oredium.teleporter"));
+                                @NotNull TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(new TranslatableComponent("tooltip.metallistix.teleporter"));
         if (pStack.hasTag()){
             if (pStack.getTagElement(this.Tag) != null){
-                BlockPos coords = NbtUtils.readBlockPos(Objects.requireNonNull(pStack.getTagElement(this.Tag)));
-                double X = coords.getX();
-                double Y = coords.getY();
-                double Z = coords.getZ();
+                BlockPos cords = NbtUtils.readBlockPos(Objects.requireNonNull(pStack.getTagElement(this.Tag)));
+                double X = cords.getX();
+                double Y = cords.getY();
+                double Z = cords.getZ();
                 pTooltipComponents.add(new TextComponent("§6Mapashe: §f" + X + ", " + Y + ", " + Z));
             }
         }
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer,
+                                                           @NotNull InteractionHand pUsedHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
         pLevel.playSound(null, pPlayer.getOnPos(), SoundEvents.RESPAWN_ANCHOR_CHARGE,
                 SoundSource.PLAYERS, 0.55f, 0.95f);
@@ -69,7 +71,8 @@ public class TeleporterItem extends Item {
     }
 
     @Override
-    public void onUseTick(Level pLevel, LivingEntity pLivingEntity, ItemStack pStack, int pRemainingUseDuration) {
+    public void onUseTick(@NotNull Level pLevel, LivingEntity pLivingEntity, @NotNull ItemStack pStack,
+                          int pRemainingUseDuration) {
         BlockPos pos = pLivingEntity.blockPosition();
         if (pLivingEntity instanceof ServerPlayer player)
         {
@@ -86,15 +89,16 @@ public class TeleporterItem extends Item {
         super.onUseTick(pLevel, pLivingEntity, pStack, pRemainingUseDuration);
     }
 
-    public int getUseDuration(ItemStack pStack) {
+    public int getUseDuration(@NotNull ItemStack pStack) {
         return 10060;
     }
 
-    public UseAnim getUseAnimation(ItemStack pStack) {
+    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack pStack) {
         return UseAnim.BOW;
     }
 
-    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack pStack, @NotNull Level pLevel,
+                                              @NotNull LivingEntity pLivingEntity) {
         if (pLivingEntity instanceof ServerPlayer player)
         {
             MetallistixPackets.sendToPlayer(new TeleporterChargeS2CPacket(0), player);
@@ -102,7 +106,8 @@ public class TeleporterItem extends Item {
         return pStack;
     }
 
-    public void releaseUsing(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity, int pTimeCharged) {
+    public void releaseUsing(@NotNull ItemStack pStack, Level pLevel,
+                             @NotNull LivingEntity pLivingEntity, int pTimeCharged) {
         if (!pLevel.isClientSide()){
             Player pPlayer = (Player) pLivingEntity;
             BlockPos respawn = null;
@@ -136,11 +141,13 @@ public class TeleporterItem extends Item {
                     toDim = minecraftServer.getLevel(Level.OVERWORLD);
                     dimension = "text.metallistix.overworld";
 
-                    this.addCoordsTag(pPlayer.getOnPos(), nbtTag);
+                    this.addCordsTag(pPlayer.getOnPos(), nbtTag);
                     pStack.setTag(nbtTag);
 
                     if (respawn != null){
-                        Optional<Vec3> optionalBed = Player.findRespawnPositionAndUseSpawnBlock(toDim, respawn,
+                        assert toDim != null;
+                        Optional<Vec3> optionalBed =
+                                Player.findRespawnPositionAndUseSpawnBlock(toDim, respawn,
                                 1.0F, false, false);
                         if(optionalBed.isPresent())
                         {
@@ -203,6 +210,7 @@ public class TeleporterItem extends Item {
                     }
                 }
                 pPlayer.playSound(SoundEvents.EXPERIENCE_ORB_PICKUP, 0.7F, 1.1F);
+                assert toDim != null;
                 pPlayer.changeDimension(toDim, new Teleporter((ServerLevel) pPlayer.getLevel()));
                 pPlayer.moveTo(nX, nY + addY, nZ);
                 pPlayer.getCooldowns().addCooldown(this, 6000);
@@ -216,9 +224,10 @@ public class TeleporterItem extends Item {
     }
 
     @Override
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+    public void inventoryTick(@NotNull ItemStack pStack, Level pLevel, @NotNull Entity pEntity,
+                              int pSlotId, boolean pIsSelected) {
         if(!pLevel.isClientSide){
-            if (savedCoords(pStack)) {
+            if (savedCords(pStack)) {
                 CompoundTag compoundtag = pStack.getOrCreateTag();
                 if (compoundtag.contains(this.Tag)) {
                     return;
@@ -227,12 +236,12 @@ public class TeleporterItem extends Item {
         }
     }
 
-    public boolean savedCoords(ItemStack pStack) {
+    public boolean savedCords(ItemStack pStack) {
         CompoundTag compoundtag = pStack.getTag();
         return compoundtag != null && (compoundtag.contains(this.Tag));
     }
 
-    private void addCoordsTag(BlockPos pPos, CompoundTag pCompoundTag) {
+    private void addCordsTag(BlockPos pPos, CompoundTag pCompoundTag) {
         pCompoundTag.put(this.Tag, NbtUtils.writeBlockPos(pPos));
     }
 }
