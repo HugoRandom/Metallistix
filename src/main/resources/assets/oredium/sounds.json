@@ -1,0 +1,62 @@
+{
+    "upgrading_sound": {
+        "subtitle": "sounds.metallistix.upgrading_sound",
+        "sounds": [
+            "metallistix:upgrading_sound"
+        ]
+    },
+    "disprosio_disc": {
+        "subtitle": "sounds.metallistix.disprosio_disc",
+        "sounds": [
+            {
+                "name": "metallistix:disprosio_disc",
+                "stream": true
+            }
+        ]
+    },
+    "franitolina_disc": {
+        "subtitle": "sounds.metallistix.franitolina_disc",
+        "sounds": [
+            {
+                "name": "metallistix:franitolina_disc",
+                "stream": true
+            }
+        ]
+    },
+    "melitonila_disc": {
+        "subtitle": "sounds.metallistix.melitonila_disc",
+        "sounds": [
+            {
+                "name": "metallistix:melitonila_disc",
+                "stream": true
+            }
+        ]
+    },
+    "alezarita_disc": {
+        "subtitle": "sounds.metallistix.alezarita_disc",
+        "sounds": [
+            {
+                "name": "metallistix:alezarita_disc",
+                "stream": true
+            }
+        ]
+    },
+    "halix_disc": {
+        "subtitle": "sounds.metallistix.halix_disc",
+        "sounds": [
+            {
+                "name": "metallistix:halix_disc",
+                "stream": true
+            }
+        ]
+    },
+    "miguelitio_disc": {
+        "subtitle": "sounds.metallistix.miguelitio_disc",
+        "sounds": [
+            {
+                "name": "metallistix:miguelitio_disc",
+                "stream": true
+            }
+        ]
+    }
+}

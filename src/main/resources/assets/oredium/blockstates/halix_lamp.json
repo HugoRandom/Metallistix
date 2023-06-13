@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "lit=false":
+        {
+            "model": "metallistix:block/halix_lamp_off"
+        },
+        "lit=true":
+        {
+            "model": "metallistix:block/halix_lamp_on"
+        }
+    }
+}

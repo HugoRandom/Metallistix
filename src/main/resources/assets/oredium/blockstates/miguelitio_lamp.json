@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "lit=false":
+        {
+            "model": "metallistix:block/miguelitio_lamp_off"
+        },
+        "lit=true":
+        {
+            "model": "metallistix:block/miguelitio_lamp_on"
+        }
+    }
+}

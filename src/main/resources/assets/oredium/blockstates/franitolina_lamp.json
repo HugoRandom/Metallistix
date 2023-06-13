@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "lit=false":
+        {
+            "model": "metallistix:block/franitolina_lamp_off"
+        },
+        "lit=true":
+        {
+            "model": "metallistix:block/franitolina_lamp_on"
+        }
+    }
+}
