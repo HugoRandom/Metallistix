@@ -1,0 +1,17 @@
+{
+  	"replace": false,
+  	"values": [
+	    "#forge:storage_blocks/disprosio",
+	    "#forge:storage_blocks/franitolina",
+		"#forge:storage_blocks/melitonila",
+		"#forge:storage_blocks/alezarita",
+	    "#forge:storage_blocks/halix",
+	    "#forge:storage_blocks/miguelitio",
+		"#forge:storage_blocks/raw_disprosio",
+		"#forge:storage_blocks/raw_franitolina",
+		"#forge:storage_blocks/raw_melitonila",
+		"#forge:storage_blocks/raw_alezarita",
+		"#forge:storage_blocks/raw_halix",
+		"#forge:storage_blocks/raw_miguelitio"
+	]
+}

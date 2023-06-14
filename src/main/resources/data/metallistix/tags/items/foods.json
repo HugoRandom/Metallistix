@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#metallistix:foods/basic",
+    "#metallistix:foods/pills",
+    "#metallistix:foods/double_pills",
+    "#metallistix:foods/coffees",
+    "#metallistix:foods/apples"
+  ]
+}

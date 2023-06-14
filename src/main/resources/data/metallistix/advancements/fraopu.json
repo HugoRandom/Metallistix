@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:franitolina_block"
+    },
+    "title": {
+      "translate": "advancement.fraopu_title"
+    },
+    "description": {
+      "translate": "advancement.fraopu_desc"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:blocks",
+  "criteria": {
+    "use_lodestone": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "oredium:fraopu"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "oredium:franitolina_block"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "use_lodestone"
+    ]
+  ]
+}

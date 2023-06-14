@@ -1,0 +1,11 @@
+{
+  	"replace": false,
+  	"values": [
+	    "#forge:ingots/disprosio",
+	    "#forge:ingots/franitolina",
+		"#forge:ingots/melitonila",
+		"#forge:ingots/alezarita",
+	    "#forge:ingots/halix",
+	    "#forge:ingots/miguelitio"
+	]
+}

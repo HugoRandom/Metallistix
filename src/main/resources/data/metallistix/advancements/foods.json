@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:enderita_apple"
+    },
+    "title": {
+      "translate": "advancement.foods_title"
+    },
+    "description": {
+      "translate": "advancement.foods_desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:start",
+  "criteria": {
+    "foods": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "oredium:foods"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "foods"
+    ]
+  ]
+}

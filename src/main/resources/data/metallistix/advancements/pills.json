@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:enderita_pill"
+    },
+    "title": {
+      "translate": "advancement.pills_title"
+    },
+    "description": {
+      "translate": "advancement.pills_desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:foods",
+  "criteria": {
+    "pills": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "tag": "oredium:foods/pills"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pills"
+    ]
+  ]
+}

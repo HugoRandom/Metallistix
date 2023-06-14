@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:village",
+  "config": {
+    "start_pool": "metallistix:house0/start_pool",
+    "size": 2
+  },
+  "biomes": "#metallistix:has_structure/house0",
+  "adapt_noise": true,
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:fox",
+          "weight": 1,
+          "minCount": 1,
+          "maxCount": 2
+        }
+      ]
+    }
+  }
+}

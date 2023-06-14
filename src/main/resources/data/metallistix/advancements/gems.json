@@ -1,0 +1,154 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:enderita_gem"
+    },
+    "title": {
+      "translate": "advancement.gems_title"
+    },
+    "description": {
+      "translate": "advancement.gems_desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:oredium_block",
+  "criteria": {
+    "enderita_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:enderita_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "alezarita_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:alezarita_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "axidita_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:axidita_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "caballerita_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:caballerita_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "cesarita_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:cesarita_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "franitolina_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:franitolina_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "hugodium_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:hugodium_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "miguelitio_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:miguelitio_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "shine_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:shine_gem"
+            ]
+          }
+        ]
+      }
+    },
+    "meluna_gem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oredium:meluna_gem"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "alezarita_gem",
+      "axidita_gem",
+      "caballerita_gem",
+      "cesarita_gem",
+      "enderita_gem",
+      "franitolina_gem",
+      "hugodium_gem",
+      "miguelitio_gem",
+      "shine_gem",
+      "meluna_gem"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "metallistix:disprosio_block",
+    "metallistix:franitolina_block",
+    "metallistix:melitonila_block",
+    "metallistix:alezarita_block",
+    "metallistix:halix_block",
+    "metallistix:miguelitio_block"
+  ]
+}

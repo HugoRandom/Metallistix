@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "metallistix:house0",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 84457561,
+    "spacing": 60,
+    "separation": 40,
+    "type": "minecraft:random_spread"
+  }
+}

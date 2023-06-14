@@ -1,0 +1,11 @@
+{
+  	"replace": false,
+  	"values": [
+    	"metallistix:halix_ingot",
+		"metallistix:alezarita_ingot",
+		"metallistix:franitolina_ingot",
+		"metallistix:melitonila_ingot",
+		"metallistix:miguelitio_ingot",
+		"metallistix:disprosio_ingot"
+  	]
+}

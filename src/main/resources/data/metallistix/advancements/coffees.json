@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:coffee_cafeleche"
+    },
+    "title": {
+      "translate": "advancement.coffees_title"
+    },
+    "description": {
+      "translate": "advancement.coffees_desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:foods",
+  "criteria": {
+    "coffee": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "tag": "oredium:foods/coffees"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "coffee"
+    ]
+  ]
+}

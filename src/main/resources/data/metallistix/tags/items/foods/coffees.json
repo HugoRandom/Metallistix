@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "metallistix:coffee_espresso",
+    "metallistix:coffee_latte",
+    "metallistix:coffee_americano",
+    "metallistix:coffee_lungo",
+    "metallistix:coffee_cappuccino",
+    "metallistix:coffee_bombon",
+    "metallistix:coffee_cafeleche",
+    "metallistix:coffee_irish",
+    "metallistix:coffee_mocca",
+    "metallistix:coffee_carajillo"
+  ]
+}

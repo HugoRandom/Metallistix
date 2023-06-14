@@ -1,0 +1,33 @@
+{
+    "replace": false,
+    "values": [
+        "metallistix:disprosio_block",
+        "metallistix:franitolina_block",
+        "metallistix:melitonila_block",
+        "metallistix:alezarita_block",
+        "metallistix:halix_block",
+        "metallistix:miguelitio_block",
+        "metallistix:disprosio_ore",
+        "metallistix:franitolina_ore",
+		"metallistix:melitonila_ore",
+        "metallistix:alezarita_ore",
+        "metallistix:halix_ore",
+        "metallistix:miguelitio_ore",
+        "metallistix:raw_disprosio_block",
+        "metallistix:raw_franitolina_block",
+		"metallistix:raw_melitonila_block",
+        "metallistix:raw_alezarita_block",
+        "metallistix:raw_halix_block",
+        "metallistix:raw_miguelitio_block",
+        "metallistix:disprosio_lamp",
+        "metallistix:franitolina_lamp",
+        "metallistix:melitonila_lamp",
+        "metallistix:alezarita_lamp",
+        "metallistix:halix_lamp",
+        "metallistix:miguelitio_lamp",
+        "metallistix:metallistix_block",
+        "metallistix:deepslate_disprosio_ore",
+        "metallistix:deepslate_franitolina_ore",
+        "metallistix:deepslate_melitonila_ore"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "oredium:oredium_pill"
+    },
+    "title": {
+      "translate": "advancement.oredium_pill_title"
+    },
+    "description": {
+      "translate": "advancement.oredium_pill_desc"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "oredium:oredium_dim",
+  "criteria": {
+    "oredium_pill": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "oredium:oredium_pill"
+          ]
+        },
+        "location": {
+          "dimension": "oredium:mapashe",
+          "block": {
+            "blocks": [
+              "oredium:oredium_block"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "oredium_pill"
+    ]
+  ]
+}

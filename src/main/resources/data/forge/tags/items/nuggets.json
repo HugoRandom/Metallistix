@@ -1,0 +1,11 @@
+{
+  	"replace": false,
+  	"values": [
+	    "#forge:nuggets/disprosio",
+	    "#forge:nuggets/franitolina",
+		"#forge:nuggets/melitonila",
+		"#forge:nuggets/alezarita",
+	    "#forge:nuggets/halix",
+	    "#forge:nuggets/miguelitio"
+	]
+}

@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "metallistix:alezarita_block",
+		"metallistix:halix_block",
+        "metallistix:miguelitio_block"
+    ]
+}

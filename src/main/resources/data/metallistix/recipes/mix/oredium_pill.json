@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G#G",
+    "PBP",
+    "G#G"
+  ],
+  "key": {
+    "#": {
+      "tag": "oredium:dusts"
+    },
+    "P": {
+      "item": "oredium:blank_pill"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "G": {
+      "tag": "forge:nuggets"
+    }
+  },
+  "result": {
+    "item": "oredium:oredium_pill",
+    "count": 2
+  }
+}

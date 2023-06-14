@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D#D",
+    "#G#",
+    "D#D"
+  ],
+  "key": {
+    "#": {
+      "tag": "oredium:foods/pills"
+    },
+    "D": {
+      "tag": "oredium:dusts"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "oredium:random_pill",
+    "count": 4
+  }
+}
